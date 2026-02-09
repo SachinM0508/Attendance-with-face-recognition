@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Home - Face Attendance</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <h1>ATTENDANCE WITH SMART FACE RECOGNITION SYSTEM</h1>
+  <div class="container">
+    <div class="card">
+      <a href="{{ url_for('students_page') }}">
+        <img src="https://img.icons8.com/clouds/200/student-male.png" alt="Student Details">
+        <p>STUDENT DETAILS</p>
+      </a>
+    </div>
+    <div class="card">
+      <img src="{{ url_for('static', filename='images/face.jpg') }}" alt="Face Rec">
+      <p>FACE RECOGNITION</p>
+    </div>
+    <div class="card">
+      <a href="{{ url_for('attendance_page') }}">
+        <img src="{{ url_for('static', filename='images/attendance.jpg') }}" alt="Attendance">
+        <p>ATTENDANCE</p>
+      </a>
+    </div>
+  </div>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
