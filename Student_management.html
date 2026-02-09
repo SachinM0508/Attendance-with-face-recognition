@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Students</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/student.css') }}">
+</head>
+<body>
+  <a href="{{ url_for('home') }}" class="back">⬅ Back</a>
+  <header>STUDENT MANAGEMENT SYSTEM</header>
+  <div class="container">
+    <div class="left-panel">
+      <div class="section-title">🎓 Student Personal Information</div>
+      <div class="form-group"><label>Student ID:</label><input id="student-id" placeholder="Auto"></div>
+      <div class="form-group"><label>Student Name:</label><input id="student-name"></div>
+      <div class="form-group"><label>Gender:</label>
+        <select id="gender"><option value="">--</option><option>Male</option><option>Female</option><option>Other</option></select>
+      </div>
+      <div class="form-group"><label>DOB:</label><input type="date" id="dob"></div>
+
+      <div class="section-title">🏫 Academic</div>
+      <div class="form-group"><label>Department:</label>
+        <select id="department"><option value="">--</option><option>CSE</option><option>ECE</option><option>MECH</option></select>
+      </div>
+      <div class="form-group"><label>Year:</label><select id="year"><option></option><option>1st</option><option>2nd</option></select></div>
+      <div class="form-group"><label>Semester:</label><select id="semester"><option></option><option>1</option><option>2</option></select></div>
+      <div class="form-group"><label>Roll No:</label><input id="roll-no"></div>
+      <div class="form-group"><label>Class Div:</label><input id="class-div"></div>
+
+      <div class="section-title">📞 Contact</div>
+      <div class="form-group"><label>Phone:</label><input id="phone"></div>
+      <div class="form-group"><label>Email:</label><input id="email"></div>
+      <div class="form-group"><label>Address:</label><textarea id="address"></textarea></div>
+
+      <div class="section-title">🧑‍🏫 Guardian</div>
+      <div class="form-group"><label>Guardian Name:</label><input id="guardian-name"></div>
+      <div class="form-group"><label>Guardian Phone:</label><input id="guardian-phone"></div>
+
+      <div class="btn-group">
+        <button class="save">SAVE</button>
+        <button class="update">UPDATE</button>
+        <button class="delete">DELETE</button>
+        <button class="reset">RESET</button>
+      </div>
+
+      <div class="btn-group">
+        <button class="photo" id="open-camera">ADD/UPDATE PHOTO</button>
+      </div>
+
+      <!-- Camera modal -->
+      <div id="camera-modal" class="modal">
+        <div class="modal-content">
+          <span class="close" id="close-camera">&times;</span>
+          <h3>📷 Capture Photo</h3>
+          <video id="video" width="350" height="250" autoplay></video><br>
+          <button id="capture-btn">📸 Capture</button>
+          <canvas id="canvas" width="350" height="250" style="display:none;"></canvas>
+          <div id="photo-output"></div>
+          <button id="upload-photo-btn" style="display:none;">Upload Photo</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="right-panel">
+      <div class="section-title">Student Details</div>
+      <div class="search-bar">
+        <label>Search By:</label>
+        <select id="search-by"><option value="name">Name</option><option value="roll_no">Roll No</option><option value="department">Department</option></select>
+        <input id="search-input" placeholder="Search...">
+        <button id="search-btn">SEARCH</button>
+        <button id="show-all-btn">SHOW ALL</button>
+      </div>
+
+      <table id="student-table">
+        <thead>
+          <tr><th>Photo</th><th>ID</th><th>Roll</th><th>Name</th><th>Dept</th><th>Gender</th><th>DOB</th><th>Phone</th><th>Email</th><th>Address</th><th>Actions</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/student.js') }}"></script>
+</body>
+</html>
