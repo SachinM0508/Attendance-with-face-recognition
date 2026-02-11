@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Attendance</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/attendance.css') }}">
+</head>
+
+<body>
+  <header>
+    <h1>📊 Attendance Dashboard</h1>
+    <a href="{{ url_for('home') }}" class="back-btn">⬅ Back</a>
+  </header>
+
+  <div class="filters">
+    <label>Class:</label>
+    <select id="class">
+      <option>CSE</option>
+      <option>ECE</option>
+    </select>
+    <label>Date:</label><input type="date" id="date">
+    <button id="exportCsv">Export CSV</button>
+  </div>
+
+  <div style="text-align:center; margin: 10px;">
+    <video id="att-video" width="480" height="360" autoplay></video><br>
+    <button id="att-capture">Mark Attendance (Capture)</button>
+    <canvas id="att-canvas" width="480" height="360" style="display:none;"></canvas>
+  </div>
+
+  <div class="table-container">
+    <table id="attendance-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Roll</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Status</th>
+          <th>Created At</th> <!-- ✅ Added -->
+        </tr>
+      </thead>
+
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/attendance.js') }}"></script>
+</body>
+
+</html>
