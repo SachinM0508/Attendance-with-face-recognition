@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212; /* dark background */
+  color: #e0e0e0;
+  text-align: center;
+}
+
+header {
+  background: rgba(20, 20, 20, 0.85);
+  padding: 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.2);
+  border-bottom: 2px solid #00f7ff;
+}
+
+header h1 {
+  font-size: 32px;
+  margin: 0;
+  color: #00f7ff;
+}
+
+header p {
+  margin: 5px 0 0 0;
+  font-style: italic;
+  color: #00e5ff;
+}
+
+#current-time {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #ffd600;
+  font-weight: bold;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.filters select,
+.filters input,
+.filters button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #00f7ff;
+  backdrop-filter: blur(10px);
+  background: rgba(30, 30, 30, 0.6);
+  color: #e0e0e0;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filters button:hover {
+  background: #00f7ff;
+  color: #121212;
+}
+
+.table-container {
+  overflow-x: auto;
+  margin: 0 auto;
+  max-width: 95%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  backdrop-filter: blur(8px);
+  background: rgba(25, 25, 25, 0.7);
+  border-radius: 12px;
+}
+
+th, td {
+  padding: 12px 10px;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+  text-align: center;
+}
+
+th {
+  background: rgba(0, 255, 255, 0.15);
+  color: #00f7ff;
+}
+
+tr:hover {
+  background: rgba(0, 255, 255, 0.08);
+}
+
+.present {
+  color: #4caf50; /* green */
+  font-weight: bold;
+}
+
+.absent {
+  color: #f44336; /* red */
+  font-weight: bold;
+}
+
+.late {
+  color: #ffeb3b; /* yellow */
+  font-weight: bold;
+}
+
+.summary {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.summary p {
+  background: rgba(20, 20, 20, 0.85);
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid #00f7ff;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.3);
+}
+
+/* Back button styling */
+.back-btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 14px;
+  background: rgba(0, 255, 255, 0.2);
+  color: #00f7ff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  border: 1px solid #00f7ff;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  background: #00f7ff;
+  color: #121212;
+  box-shadow: 0 0 12px #00f7ff;
+}
