@@ -1,0 +1,256 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f0f0;
+}
+
+header {
+    background: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 26px;
+    font-weight: bold;
+    color: darkblue;
+    border-bottom: 2px solid red;
+}
+
+.container {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+}
+
+.left-panel, .right-panel {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    flex: 1;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.section-title {
+    font-weight: bold;
+    margin: 10px 0;
+    color: red;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.form-group {
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+label {
+    width: 120px;
+    font-size: 14px;
+}
+
+input, select {
+    padding: 5px;
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn-group {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+}
+
+.save { background: green; }
+.update { background: orange; }
+.delete { background: red; }
+.reset { background: gray; }
+.photo { background: #007bff; }
+.photo:hover { background: #0056b3; }
+
+.search-bar { display: flex; gap: 10px; margin: 10px 0; }
+.search-bar select, .search-bar input { flex: 1; }
+.search { background: blue; }
+.show { background: darkblue; }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 14px;
+}
+table, th, td { border: 1px solid #ccc; }
+th, td { padding: 6px; text-align: center; }
+
+/* Back button fixed top-right */
+.back {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: darkorange;
+    color: white;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.back:hover { background: orangered; }
+
+/* Modal background */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+}
+
+/* Modal content */
+.modal-content {
+    background: white;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
+}
+.modal-content h2 { margin-bottom: 10px; color: darkblue; }
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: red;
+}
+
+/* Capture button */
+#capture-btn { background: green; }
+#capture-btn:disabled { background: gray; cursor: not-allowed; }
+
+.back {
+  display: inline-block;
+  background: darkorange;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.back:hover {
+  background: orangered;
+}
+
+.edit-btn,
+.delete-btn {
+  border: none;
+  padding: 6px 10px;
+  margin: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}
+
+.edit-btn {
+  background-color: #4caf50;
+}
+
+.delete-btn {
+  background-color: #f44336;
+}
+
+
+.right-panel {
+  flex: 1;
+  padding: 20px;
+  background: #f5f6fa;
+  border-left: 2px solid #ddd;
+  overflow-y: auto;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 5px 8px;
+}
+
+.table-container {
+  overflow-x: auto;
+  max-height: 480px;
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background: #4b7bec;
+  color: white;
+}
+
+td img {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.action-btn {
+  padding: 4px 8px;
+  margin: 2px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}
+
+.action-btn.update {
+  background-color: #22a6b3;
+}
+
+.action-btn.delete {
+  background-color: #eb4d4b;
+}
+
+
